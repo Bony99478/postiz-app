@@ -6,9 +6,10 @@ export class SeededRandom {
   }
 
   private hashSeed(seed: string): number {
+    const boundedSeed = seed.slice(0, 256);
     let hash = 2166136261;
-    for (let i = 0; i < seed.length; i++) {
-      hash ^= seed.charCodeAt(i);
+    for (let i = 0; i < boundedSeed.length; i++) {
+      hash ^= boundedSeed.charCodeAt(i);
       hash = Math.imul(hash, 16777619);
     }
 
@@ -25,4 +26,3 @@ export class SeededRandom {
     return this._state / 4294967296;
   }
 }
-
