@@ -6,10 +6,13 @@ export class SeededRandom {
   }
 
   private hashSeed(seed: string): number {
-    const boundedSeed = seed.slice(0, 256);
     let hash = 2166136261;
-    for (let i = 0; i < boundedSeed.length; i++) {
-      hash ^= boundedSeed.charCodeAt(i);
+    for (let i = 0; i < 256; i++) {
+      const code = seed.charCodeAt(i);
+      if (Number.isNaN(code)) {
+        break;
+      }
+      hash ^= code;
       hash = Math.imul(hash, 16777619);
     }
 
