@@ -104,6 +104,13 @@
 
 To have the project up and running, please follow the [Quick Start Guide](https://docs.postiz.com/quickstart)
 
+## Crash Demo Simulation (Educational)
+
+- A demo-only crash game simulator is available for educational/testing purposes.
+- It does **not** predict real outcomes and must not be used for financial decisions.
+- Backend endpoints are under `/crash-demo` (`start`, `run`, `stop`, `get session`).
+- Frontend demo screen is available at `/agents/crash-demo`.
+
 ## Sponsor Postiz
 
 We now give a few options to Sponsor Postiz:
