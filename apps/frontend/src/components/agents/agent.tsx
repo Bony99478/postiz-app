@@ -226,30 +226,38 @@ const Threads: FC = () => {
     >
       <div className="absolute top-0 start-0 w-full h-full p-[20px] overflow-auto scrollbar scrollbar-thumb-fifth scrollbar-track-newBgColor">
         <div className="mb-[15px] justify-center flex group-[.sidebar]:pb-[15px]">
-          <Link
-            href={`/agents`}
-            className="text-white whitespace-nowrap flex-1 pt-[12px] pb-[14px] ps-[16px] pe-[20px] group-[.sidebar]:p-0 min-h-[44px] max-h-[44px] rounded-md bg-btnPrimary flex justify-center items-center gap-[5px] outline-none"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21"
-              height="20"
-              viewBox="0 0 21 20"
-              fill="none"
-              className="min-w-[21px] min-h-[20px]"
+          <div className="flex flex-col gap-[8px] w-full">
+            <Link
+              href={`/agents`}
+              className="text-white whitespace-nowrap flex-1 pt-[12px] pb-[14px] ps-[16px] pe-[20px] group-[.sidebar]:p-0 min-h-[44px] max-h-[44px] rounded-md bg-btnPrimary flex justify-center items-center gap-[5px] outline-none"
             >
-              <path
-                d="M10.5001 4.16699V15.8337M4.66675 10.0003H16.3334"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <div className="flex-1 text-start text-[16px] group-[.sidebar]:hidden">
-              Start a new chat
-            </div>
-          </Link>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+                className="min-w-[21px] min-h-[20px]"
+              >
+                <path
+                  d="M10.5001 4.16699V15.8337M4.66675 10.0003H16.3334"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <div className="flex-1 text-start text-[16px] group-[.sidebar]:hidden">
+                Start a new chat
+              </div>
+            </Link>
+            <Link
+              href={`/agents/crash-demo`}
+              className="text-white whitespace-nowrap flex-1 py-[10px] px-[16px] min-h-[40px] rounded-md bg-btnSimple hover:bg-boxFocused flex justify-center items-center text-[14px]"
+            >
+              Crash demo
+            </Link>
+          </div>
         </div>
         <div className="flex flex-col gap-[1px]">
           {data?.threads?.map((p: any) => (
