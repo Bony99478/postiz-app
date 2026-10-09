@@ -1,0 +1,31 @@
+.rdm-download-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 20px;
+	background: #2271b1;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.rdm-download-button:hover,
+.rdm-download-button:focus {
+	background: #135e96;
+	color: #fff;
+}
+
+.rdm-download-button__meta {
+	font-weight: 400;
+	opacity: 0.85;
+	font-size: 0.85em;
+}
+
+.rdm-download-count {
+	display: block;
+	margin-top: 6px;
+	font-size: 0.85em;
+	color: #666;
+}
